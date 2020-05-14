@@ -1,20 +1,18 @@
 <h2>User List</h2>
 
-<!--
+<div *ngIf="userChild!=undefined">
 <div class="card" style="width: 12rem;">
-      <li *ngFor="let user of userList" >
-      <img class="card-img-top" src={{user.imageUrl}} alt={{user.imageUrl}} width="100" height="100">
+      <img class="card-img-top" src={{userChild.imageUrl}} alt={{userChild.imageUrl}} width="100" height="100">
       <div class="card-body">
-        <h5 class="card-title">{{user.firstName | uppercase}} {{user.lastName | uppercase}}</h5>
-        <p class="card-text">{{user.email | lowercase}}</p>
-        <p class="card-text">{{user.dob | date:"dd-MMM-yyyy" }}</p>
-        <p class="card-text">{{user.profession | titlecase }}</p>
-        <button type="button" class="btn btn-primary" (click)="getDetails(user)">More Info...</button> 
+        <h5 class="card-title">{{userChild.firstName | uppercase}} {{userChild.lastName | uppercase}}</h5>
+        <p class="card-text">{{userChild.email | lowercase}}</p>
+        <p class="card-text">{{userChild.dob | date:"dd-MMM-yyyy" }}</p>
+        <p class="card-text">{{userChild.profession | titlecase }}</p>
+       <!-- <button type="button" class="btn btn-primary" (click)="getDetails(user)">More Info...</button> -->
       </div>
-
-    </li>
+</div>
     </div>
--->
+
 <app-user-card *ngFor="let user of userList" [user]="user" (userClick)="showUserFromParent($event)"></app-user-card>
 	
 

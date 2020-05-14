@@ -20,7 +20,9 @@ export class UserCardComponent implements OnInit {
   }
 
   showUser(event, user:User){
-    this.userClick.emit("Inside ShowUserChild\n"+user.id+" "+user.firstName+" "+user.lastName+" "+user.dob+"  "+user.email+" "+user.profession);
+   // this.userClick.emit("Inside ShowUserChild\n"+user.id+" "+user.firstName+" "+user.lastName+" "+user.dob+"  "+user.email+" "+user.profession);
+  this.userClick.emit(JSON.stringify(user));
+
   }
 
 }

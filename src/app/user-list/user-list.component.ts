@@ -11,7 +11,7 @@ import {UserService} from '../user.service';
 export class UserListComponent implements OnInit {
 
   userList: Array<User>;
-
+  userChild:User;
   constructor(private userService: UserService) { }
 
   ngOnInit(): void {
@@ -22,8 +22,10 @@ export class UserListComponent implements OnInit {
   //  ]
   this.userList=this.userService.getUsers();
   }
-  showUserFromParent = function(user){
-    alert("Inside showUserFromParent \n"+user);
+  showUserFromParent = function(user1){
+    alert("Inside showUserFromParent \n"+user1);
+    this.userChild=JSON.parse(user1);
+    alert(this.userChild);
   }
   getDetails = (user) => {
     alert(JSON.stringify(user));
