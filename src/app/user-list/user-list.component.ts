@@ -22,7 +22,9 @@ export class UserListComponent implements OnInit {
   //  ]
   this.userList=this.userService.getUsers();
   }
-
+  showUserFromParent = function(user){
+    alert("Inside showUserFromParent \n"+user);
+  }
   getDetails = (user) => {
     alert(JSON.stringify(user));
   }
