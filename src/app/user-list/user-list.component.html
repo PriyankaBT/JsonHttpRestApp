@@ -2,7 +2,7 @@
 
 <div *ngIf="userChild!=undefined">
 <div class="card" style="width: 12rem;">
-      <img class="card-img-top" src={{userChild.imageUrl}} alt={{userChild.imageUrl}} width="100" height="100">
+      <img class="card-img-top" src="{{userChild.imageUrl}} | image :'https://img.icons8.com/office/80/000000/person-male.png'" alt={{userChild.firstName}} width="100" height="100">
       <div class="card-body">
         <h5 class="card-title">{{userChild.firstName | uppercase}} {{userChild.lastName | uppercase}}</h5>
         <p class="card-text">{{userChild.email | lowercase}}</p>

@@ -8,6 +8,7 @@ import { HomeComponent } from './home/home.component';
 import { UserListComponent } from './user-list/user-list.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { UserCardComponent } from './user-card/user-card.component';
+import { ImagePipe } from './image.pipe';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { UserCardComponent } from './user-card/user-card.component';
     HomeComponent,
     UserListComponent,
     NotFoundComponent,
-    UserCardComponent
+    UserCardComponent,
+    ImagePipe
  
   ],
   imports: [
