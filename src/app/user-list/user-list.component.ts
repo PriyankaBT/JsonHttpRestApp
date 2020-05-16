@@ -8,20 +8,33 @@ import {UserService} from '../user.service';
   styleUrls: ['./user-list.component.css'],
   providers:  [UserService]
 })
-export class UserListComponent implements OnInit {
+export class UserListComponent {
 
-  userList: Array<User>;
+  
+  users:User[];
   userChild:User;
-  constructor(private userService: UserService) { }
+  constructor(public userService: UserService) { 
 
-  ngOnInit(): void {
- //   this.userList = [
-  //    {id: 1, firstName :'Priyanka', lastName :'Murkute',email :'abc@yahoo.com', profession:'Trainer',dob: new Date(1986, 11, 25), imageUrl:'assets/IMG1.jpeg'},
-  //    {id: 2, firstName :'Jayesh', lastName :'Murkute',email :'aa@gmail.com', profession:'Chartered Accountant',dob: new Date(1987, 3, 1), imageUrl:'assets/IMG2.jpeg'},
-  //    {id: 3, firstName :'Bhupendra', lastName :'Murkute',email :'xyz@gmail.com', profession:'SOFTWARE eNGINEER',dob:new Date(1988, 3, 15), imageUrl:'assets/IMG1.jpeg'}    
-  //  ]
-  this.userList=this.userService.getUsers();
+    this.getUsers();
   }
+
+  getUsers(): void {
+    this.userService.getUsers().subscribe((resp: any) =>{
+      console.log("RESP : ", resp)
+      this.users = resp;
+    }, (err)=> {
+      console.log("ERROR : ", err)
+    });
+  }
+
+ /* getUsers() {
+    this.userService.getUsers()
+    .then(data => {
+    this.userList = data;
+    console.log(this.userList);
+    });
+    }*/
+
   showUserFromParent = function(user1){
     alert("Inside showUserFromParent \n"+user1);
     this.userChild=JSON.parse(user1);
@@ -30,4 +43,5 @@ export class UserListComponent implements OnInit {
   getDetails = (user) => {
     alert(JSON.stringify(user));
   }
+
 }

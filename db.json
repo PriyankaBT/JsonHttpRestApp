@@ -1,0 +1,58 @@
+{
+  "users": [
+    {
+      "id": 101,
+      "firstName": "Jyoti",
+      "lastName": "Parab",
+      "email": "jp@yahoo.com",
+      "profession": "Trainer",
+      "dob": "new Date(1984, 12, 22)",
+      "imageUrl": "assets/IMG1.jpeg"
+    },
+    {
+      "id": 102,
+      "firstName": "Mithil",
+      "lastName": "Koli",
+      "email": "mk@yahoo.com",
+      "profession": "Coast Gaurd",
+      "dob": "new Date(1991, 1, 5)",
+      "imageUrl": "assets/IMG1.jpeg"
+    },
+    {
+      "id": 103,
+      "firstName": "Renuka",
+      "lastName": "More",
+      "email": "rm@yahoo.com",
+      "profession": "Designer",
+      "dob": "new Date(1996, 11, 25)",
+      "imageUrl": "assets/IMG1.jpeg"
+    },
+    {
+      "id": 104,
+      "firstName": "Radhika",
+      "lastName": "Apate",
+      "email": "ra@yahoo.com",
+      "profession": "Teacher",
+      "dob": "new Date(1989, 10, 12)",
+      "imageUrl": "assets/IMG1.jpeg"
+    },
+    {
+      "id": 105,
+      "firstName": "Rati",
+      "lastName": "Pintu",
+      "email": "rp@yahoo.com",
+      "profession": "Actor",
+      "dob": "new Date(1982, 12, 22)",
+      "imageUrl": "assets/IMG1.jpeg"
+    },
+    {
+      "id": 107,
+      "firstName": "aditi",
+      "lastName": "Parab",
+      "email": "jp@yahoo.com",
+      "profession": "Trainer",
+      "dob": "new Date(1984, 12, 22)",
+      "imageUrl": "assets/IMG1.jpeg"
+    }
+  ]
+}

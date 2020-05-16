@@ -2,18 +2,18 @@
 
 <div *ngIf="userChild!=undefined">
 <div class="card" style="width: 12rem;">
-      <img class="card-img-top" src="{{userChild.imageUrl}} | image :'https://img.icons8.com/office/80/000000/person-male.png'" alt={{userChild.firstName}} width="100" height="100">
+      <img class="card-img-top" src="{{userChild.imageUrl}}" alt={{userChild.firstName}} width="100" height="100">
       <div class="card-body">
-        <h5 class="card-title">{{userChild.firstName | uppercase}} {{userChild.lastName | uppercase}}</h5>
-        <p class="card-text">{{userChild.email | lowercase}}</p>
-        <p class="card-text">{{userChild.dob | date:"dd-MMM-yyyy" }}</p>
-        <p class="card-text">{{userChild.profession | titlecase }}</p>
+        <h5 class="card-title">{{userChild.firstName}} {{userChild.lastName}}</h5>
+        <p class="card-text">{{userChild.email}}</p>
+        <p class="card-text">{{userChild.dob}}</p>
+        <p class="card-text">{{userChild.profession }}</p>
        <!-- <button type="button" class="btn btn-primary" (click)="getDetails(user)">More Info...</button> -->
       </div>
 </div>
     </div>
 
-<app-user-card *ngFor="let user of userList" [user]="user" (userClick)="showUserFromParent($event)"></app-user-card>
+<app-user-card *ngFor="let user of users" [user]="user" (userClick)="showUserFromParent($event)"></app-user-card>
 	
 
     

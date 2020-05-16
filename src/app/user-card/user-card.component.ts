@@ -13,7 +13,7 @@ export class UserCardComponent implements OnInit {
   userClick: EventEmitter<String> = new EventEmitter<String>(); 
   constructor() {
 
-    console.log(this.user);
+    console.log("USER : ",this.user);
    }
   
   ngOnInit(): void {
